@@ -10,6 +10,21 @@ export default class DatePage extends React.Component {
 
   today = new Date(new Date() + ' UTC').toISOString().split('T')[0];
 
+  componentDidMount() {
+    try {
+      const total = Number(localStorage.getItem('total'));
+      if (total) {
+        this.setState(() => ({ total }));
+      }
+    } catch (e) {}
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.total !== this.state.total) {
+      localStorage.setItem('total', this.state.total);
+    }
+  }
+
   handlerAddOne = () => {
     const total = this.state.total + 1;
     this.setState(() => ({ total }));
