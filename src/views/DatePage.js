@@ -5,8 +5,7 @@ import Pager from '../components/Pager';
 
 export default class DatePage extends React.Component {
   state = {
-    total: 0,
-    user: undefined
+    total: 0
   };
 
   handlerAddOne = () => {
@@ -18,7 +17,7 @@ export default class DatePage extends React.Component {
     return (
       <div className="DatePage">
         <div>1Mas - Día</div>
-        <UserGreeting user="Kus" />
+        <UserGreeting user="John Doe" />
         <Counter total={this.state.total} />
         <button onClick={this.handlerAddOne}>+1</button>
         <Pager />
