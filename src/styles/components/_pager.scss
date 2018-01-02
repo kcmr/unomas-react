@@ -1,0 +1,11 @@
+@import "../base/base";
+
+.Pager {
+  display: flex;
+  justify-content: space-between;
+
+  &__btn {
+    color: $text-color;
+    padding: rem(20);
+  }
+}

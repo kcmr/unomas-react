@@ -1,10 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import UserGreeting from './UserGreeting';
+import Counter from './Counter';
+import Pager from './Pager';
 
 const DatePage = () => (
-  <div>
+  <div className="DatePage">
     <div>1Mas - Día</div>
-    <Link to="/today">Ayer</Link>
+    <UserGreeting user="Kus" />
+    <Counter total="10" />
+    <button>+1</button>
+    <Pager />
   </div>
 );
 

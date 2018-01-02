@@ -4,17 +4,21 @@ import NotFoundPage from '../components/NotFoundPage';
 import LoginPage from '../components/LoginPage';
 import TodayPage from '../components/TodayPage';
 import DatePage from '../components/DatePage';
+import GraphBar from '../components/GraphBar';
 
 
 const AppRouter = () => (
   <BrowserRouter>
-    <div>
-      <Switch>
-        <Route path="/" component={LoginPage} exact />
-        <Route path="/today" component={TodayPage} />
-        <Route path="/date" component={DatePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+    <div className="wrapper">
+      <div className="content">
+        <Switch>
+          <Route path="/" component={LoginPage} exact />
+          <Route path="/today" component={TodayPage} />
+          <Route path="/date" component={DatePage} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </div>
+      <GraphBar />
     </div>
   </BrowserRouter>
 );

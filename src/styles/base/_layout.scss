@@ -1,0 +1,18 @@
+@import "base";
+
+body {
+  font-family: sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+.wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  flex: 1;
+}

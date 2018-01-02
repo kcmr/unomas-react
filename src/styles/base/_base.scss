@@ -10,11 +10,3 @@ $baseFontSize : 16;
 
   @return $pixels / $context * 1rem;
 }
-
-body {
-  font-family: sans-serif;
-}
-
-.is-active {
-  font-weight: bold;
-}
