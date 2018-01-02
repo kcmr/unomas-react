@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Pager = (props) => (
+const Pager = () => (
   <div className="Pager">
-    <Link to="/date" className="Pager__btn">Anterior</Link>
-    <Link to="/date" className="Pager__btn">Siguiente</Link>
+    <Link to="/date/previous" className="Pager__btn">Anterior</Link>
+    <Link to="/date/next" className="Pager__btn">Siguiente</Link>
   </div>
 );
 

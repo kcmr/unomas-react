@@ -13,7 +13,8 @@ const AppRouter = () => (
         <Switch>
           <Route path="/" component={LoginPage} exact />
           <Route path="/today" component={TodayPage} />
-          <Route path="/date" component={DatePage} />
+          <Route path="/date" component={DatePage} exact />
+          <Route path="/date/:day" component={DatePage} />
           <Route component={NotFoundPage} />
         </Switch>
       </div>
