@@ -16,10 +16,10 @@ export default class DatePage extends React.Component {
   render() {
     return (
       <div className="DatePage">
-        <div>1Mas - {this.props.match.params.day ? this.props.match.params.day : 'Hoy'}</div>
+        <div>1 Más - {this.props.match.params.day ? this.props.match.params.day : 'Hoy'}</div>
         <UserGreeting user="John Doe" />
         <Counter total={this.state.total} />
-        <button onClick={this.handlerAddOne}>+1</button>
+        {this.props.match.params.day === undefined && <button onClick={this.handlerAddOne}>+1</button>}
         <Pager />
       </div>
     );
