@@ -3,14 +3,27 @@ import UserGreeting from '../components/UserGreeting';
 import Counter from '../components/Counter';
 import Pager from '../components/Pager';
 
-const DatePage = () => (
-  <div className="DatePage">
-    <div>1Mas - Día</div>
-    <UserGreeting user="Kus" />
-    <Counter total="10" />
-    <button>+1</button>
-    <Pager />
-  </div>
-);
+export default class DatePage extends React.Component {
+  state = {
+    total: 0,
+    user: undefined
+  };
 
-export default DatePage;
+  handlerAddOne = () => {
+    const total = this.state.total + 1;
+    this.setState(() => ({ total }));
+  };
+
+  render() {
+    return (
+      <div className="DatePage">
+        <div>1Mas - Día</div>
+        <UserGreeting user="Kus" />
+        <Counter total={this.state.total} />
+        <button onClick={this.handlerAddOne}>+1</button>
+        <Pager />
+      </div>
+    );
+  }
+};
+
