@@ -1,7 +1,7 @@
 import React from 'react';
-import UserGreeting from './UserGreeting';
-import Counter from './Counter';
-import Pager from './Pager';
+import UserGreeting from '../components/UserGreeting';
+import Counter from '../components/Counter';
+import Pager from '../components/Pager';
 
 const DatePage = () => (
   <div className="DatePage">

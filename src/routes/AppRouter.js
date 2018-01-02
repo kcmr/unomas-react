@@ -1,11 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import NotFoundPage from '../components/NotFoundPage';
-import LoginPage from '../components/LoginPage';
-import TodayPage from '../components/TodayPage';
-import DatePage from '../components/DatePage';
+import NotFoundPage from '../views/NotFoundPage';
+import LoginPage from '../views/LoginPage';
+import TodayPage from '../views/TodayPage';
+import DatePage from '../views/DatePage';
 import GraphBar from '../components/GraphBar';
-
 
 const AppRouter = () => (
   <BrowserRouter>
