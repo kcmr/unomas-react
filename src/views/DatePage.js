@@ -36,7 +36,7 @@ export default class DatePage extends React.Component {
         <div>1 Más - {this.props.match.params.day ? this.props.match.params.day : 'Hoy'}</div>
         <UserGreeting user="John Doe" />
         <Counter count={this.state.total} />
-        {!this.props.match.params.day && <button onClick={this.handlerAddOne}>+1</button>}
+        {!this.props.match.params.day && <button onClick={this.handlerAddOne} className="btn btn--hot btn--rounded btn--huge">+</button>}
         <Pager date={this.props.match.params.day} currentDate={this.today} />
       </div>
     );

@@ -1,0 +1,40 @@
+.wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+.GraphBar {
+  margin: 0 auto;
+  outline: 1px solid red;
+}
+
+// Login
+.login {
+  max-width: rem(625);
+  margin: rem(50) auto rem(68);
+
+  &__title {
+    font-size: rem($font-size-xl);
+    font-weight: 700;
+    margin: 0 0 rem(13);
+    word-spacing: rem(-30);
+  }
+
+  &__subtitle {
+    font-size: rem($font-size-l);
+    margin: 0 0 rem(70);
+    @include font-smoothing;
+  }
+
+  &__buttons > .btn {
+    min-width: rem(204);
+    margin: 0 rem(10);
+  }
+}
+

@@ -1,5 +1,7 @@
 @import "base/base";
-@import "base/settings";
-@import "base/layout";
 
+@import "layout";
+
+@import "components/buttons";
 @import "components/pager";
+@import "components/graphbar";

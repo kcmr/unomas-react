@@ -1,12 +1,9 @@
-$baseFontSize : 16;
-@function rem($pixels, $context: $baseFontSize) {
-  @if (unitless($pixels)) {
-    $pixels: $pixels * 1px;
-  }
+@import "settings";
+@import "utils";
 
-  @if (unitless($context)) {
-    $context: $context * 1px;
-  }
-
-  @return $pixels / $context * 1rem;
+body {
+  font-family: $base-font;
+  font-weight: 300;
+  background-color: $bg-color;
+  color: $text-color;
 }

@@ -1,0 +1,43 @@
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: rem($font-size-m);
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #ccc;
+  color: white;
+  padding: 0 rem(20);
+  height: rem(53);
+  line-height: rem(53);
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.29);
+  border: 0;
+  border-radius: rem(4);
+  outline: none;
+  @include font-smoothing;
+
+  > b {
+    font-weight: 700;
+  }
+
+  &--cold {
+    background-color: $cold-color;
+  }
+
+  &--hot {
+    background-color: $hot-color;
+  }
+
+  &--rounded {
+    width: rem(53);
+    border-radius: 50%;
+  }
+
+  &--huge {
+    width: rem(95);
+    height: rem(95);
+    line-height: rem(95);
+    font-size: rem(70);
+    font-weight: 700;
+  }
+}
