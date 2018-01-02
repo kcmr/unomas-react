@@ -8,6 +8,8 @@ export default class DatePage extends React.Component {
     total: 0
   };
 
+  today = new Date(new Date() + ' UTC').toISOString().split('T')[0];
+
   handlerAddOne = () => {
     const total = this.state.total + 1;
     this.setState(() => ({ total }));
@@ -19,8 +21,8 @@ export default class DatePage extends React.Component {
         <div>1 Más - {this.props.match.params.day ? this.props.match.params.day : 'Hoy'}</div>
         <UserGreeting user="John Doe" />
         <Counter count={this.state.total} />
-        {this.props.match.params.day === undefined && <button onClick={this.handlerAddOne}>+1</button>}
-        <Pager />
+        {!this.props.match.params.day && <button onClick={this.handlerAddOne}>+1</button>}
+        <Pager date={this.props.match.params.day} currentDate={this.today} />
       </div>
     );
   }
